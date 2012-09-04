@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+
+
+<style type="text/css">
+/* #topleft {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 50%;
+	height: 3em;
+}
+
+
+#topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 50%;
+	height: 3em;
+} */
+
+
+/* #abilities {
+	position: absolute;
+	top: 5.5em;
+	left: 0;
+
+	width: 50%;
+} */
+
+
+table thead tr th {
+	text-align: left;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+#spells {
+	display: none;
+
+	position: absolute;
+	top: 5.5em;
+	right: 0;
+
+	width: 50%;
+	height: 10em;
+}
+
+
+#ac_init {
+	display: none;
+
+	position: absolute;
+	top: 18em;
+	left: 0;
+
+	width: 50%;
+	height: 2em;
+}
+
+
+#savings {
+	display: none;
+
+	position: absolute;
+	top: 8em;
+	left: 0;
+
+	width: 50%;
+	height: 3em;
+}
+
+
+#weapons {
+	display: none;
+
+	position: absolute;
+	top: 11em;
+	left: 0;
+
+	width: 50%;
+}
+
+
+#armor {
+	display: none;
+
+	position: absolute;
+	left: 0;
+
+	width: 50%;
+}
+
+
+#feats {
+	display: none;
+
+	position: absolute;
+	right: 0;
+
+	width: 50%;
+}
+
+
+#misc {
+	display: none;
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	width: 50%;
+	height: 3em;
+}
+
+
+input {
+	width: 100%;
+}
+
+
+label {
+	font-variant: small-caps;
+	margin-right: 1em;
+}
+</style>
+
+</head>
+<body>
+
+<div data-role="page">
+
+<div data-role="content">
+<form>
+
+<div class="ui-grid-a">
+
+<div id="topleft" class="ui-block-a">
+	<div class="ui-grid-solo ui-field-contain">
+		<label for="character_name">Character Name</label>
+		<input type="text" data-mini="true" id="character_name" placeholder="Character Name">
+	</div>
+
+	<div class="ui-grid-a">
+		<div class="ui-block-a ui-field-contain">
+			<label for="race">Race</label>
+			<input type="text" data-mini="true" id="race" placeholder="Race">
+		</div>
+
+		<div class="ui-block-b ui-field-contain">
+			<label for="alignment">Alignment</label>
+			<input type="text" data-mini="true" id="alignment" placeholder="Alignment">
+		</div>
+	</div>
+
+	<div class="ui-grid-b">
+		<div class="ui-block-a ui-field-contain">
+			<label for="gender">Gender</label>
+			<input type="text" data-mini="true" id="gender" placeholder="Gender">
+		</div>
+
+		<div class="ui-block-b ui-field-contain">
+			<label for="age">Age</label>
+			<input type="number" data-mini="true" id="age" placeholder="Age">
+		</div>
+
+		<div class="ui-block-c ui-field-contain">
+			<label for="size">Size</label>
+			<input type="text" data-mini="true" id="size" placeholder="Size">
+		</div>
+	</div>
+</div>
+
+
+<div id="topright" class="ui-block-b">
+	<div class="ui-grid-solo">
+		<input type="text" data-mini="true" id="player" placeholder="Player Name">
+	</div>
+
+
+	<div class="ui-grid-b">
+		<div class="ui-block-a">
+			<input type="text" data-mini="true" id="class_a" placeholder="Class A">
+		</div>
+
+		<div class="ui-block-b">
+			<input type="text" data-mini="true" id="class_b" placeholder="Class B">
+		</div>
+
+		<div class="ui-block-c">
+			<input type="text" data-mini="true" id="class_c" placeholder="Class C">
+		</div>
+
+		<div class="ui-block-a">
+			<input type="number" data-mini="true" id="level_a" placeholder="Level A">
+		</div>
+
+		<div class="ui-block-b">
+			<input type="number" data-mini="true" id="level_b" placeholder="Level B">
+		</div>
+
+		<div class="ui-block-c">
+			<input type="number" data-mini="true" id="level_c" placeholder="Level C">
+		</div>
+
+		<div class="ui-block-a">
+			<input type="number" data-mini="true" id="xp_a" placeholder="XP A">
+		</div>
+
+		<div class="ui-block-b">
+			<input type="number" data-mini="true" id="xp_b" placeholder="XP B">
+		</div>
+
+		<div class="ui-block-c">
+			<input type="number" data-mini="true" id="xp_c" placeholder="XP C">
+		</div>
+	</div>
+</div>
+
+
+<div id="abilities" class="ui-block-a">
+	<table>
+		<thead>
+			<tr>
+				<th>Abilities</th>
+				<th>Score</th>
+				<th>Modifier</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><label for="str_score">Strength</label></td>
+				<td><input type="text" id="str_score" placeholder="Score"></td>
+				<td><input type="text" id="str_mod" placeholder="Modifier"></td>
+			</tr>
+			<tr>
+				<td><label for="dex_score">Dexterity</label></td>
+				<td><input type="text" id="dex_score" placeholder="Score"></td>
+				<td><input type="text" id="dex_mod" placeholder="Modifier"></td>
+			</tr>
+			<tr>
+				<td><label for="con_score">Constitution</label></td>
+				<td><input type="text" id="con_score" placeholder="Score"></td>
+				<td><input type="text" id="con_mod" placeholder="Modifier"></td>
+			</tr>
+			<tr>
+				<td><label for="int_score">Intelligence</label></td>
+				<td><input type="text" id="int_score" placeholder="Score"></td>
+				<td><input type="text" id="int_mod" placeholder="Modifier"></td>
+			</tr>
+			<tr>
+				<td><label for="wis_score">Wisdom</label></td>
+				<td><input type="text" id="wis_score" placeholder="Score"></td>
+				<td><input type="text" id="wis_mod" placeholder="Modifier"></td>
+			</tr>
+			<tr>
+				<td><label for="cha_score">Charisma</label></td>
+				<td><input type="text" id="cha_score" placeholder="Score"></td>
+				<td><input type="text" id="cha_mod" placeholder="Modifier"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div id="spells">
+	<table>
+		<thead>
+			<tr>
+				<th>Spells</th>
+				<th>Know</th>
+				<th>Cast</th>
+				<th>Know</th>
+				<th>Cast</th>
+				<th>Know</th>
+				<th>Cast</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>0</td>
+				<td><input type="text" id="spells_know_0_1"></td>
+				<td><input type="text" id="spells_cast_0_1"></td>
+				<td><input type="text" id="spells_know_0_2"></td>
+				<td><input type="text" id="spells_cast_0_2"></td>
+				<td><input type="text" id="spells_know_0_3"></td>
+				<td><input type="text" id="spells_cast_0_3"></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td><input type="text" id="spells_know_1_1"></td>
+				<td><input type="text" id="spells_cast_1_1"></td>
+				<td><input type="text" id="spells_know_1_2"></td>
+				<td><input type="text" id="spells_cast_1_2"></td>
+				<td><input type="text" id="spells_know_1_3"></td>
+				<td><input type="text" id="spells_cast_1_3"></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><input type="text" id="spells_know_2_1"></td>
+				<td><input type="text" id="spells_cast_2_1"></td>
+				<td><input type="text" id="spells_know_2_2"></td>
+				<td><input type="text" id="spells_cast_2_2"></td>
+				<td><input type="text" id="spells_know_2_3"></td>
+				<td><input type="text" id="spells_cast_2_3"></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><input type="text" id="spells_know_3_1"></td>
+				<td><input type="text" id="spells_cast_3_1"></td>
+				<td><input type="text" id="spells_know_3_2"></td>
+				<td><input type="text" id="spells_cast_3_2"></td>
+				<td><input type="text" id="spells_know_3_3"></td>
+				<td><input type="text" id="spells_cast_3_3"></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td><input type="text" id="spells_know_4_1"></td>
+				<td><input type="text" id="spells_cast_4_1"></td>
+				<td><input type="text" id="spells_know_4_2"></td>
+				<td><input type="text" id="spells_cast_4_2"></td>
+				<td><input type="text" id="spells_know_4_3"></td>
+				<td><input type="text" id="spells_cast_4_3"></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td><input type="text" id="spells_know_5_1"></td>
+				<td><input type="text" id="spells_cast_5_1"></td>
+				<td><input type="text" id="spells_know_5_2"></td>
+				<td><input type="text" id="spells_cast_5_2"></td>
+				<td><input type="text" id="spells_know_5_3"></td>
+				<td><input type="text" id="spells_cast_5_3"></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td><input type="text" id="spells_know_6_1"></td>
+				<td><input type="text" id="spells_cast_6_1"></td>
+				<td><input type="text" id="spells_know_6_2"></td>
+				<td><input type="text" id="spells_cast_6_2"></td>
+				<td><input type="text" id="spells_know_6_3"></td>
+				<td><input type="text" id="spells_cast_6_3"></td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td><input type="text" id="spells_know_7_1"></td>
+				<td><input type="text" id="spells_cast_7_1"></td>
+				<td><input type="text" id="spells_know_7_2"></td>
+				<td><input type="text" id="spells_cast_7_2"></td>
+				<td><input type="text" id="spells_know_7_3"></td>
+				<td><input type="text" id="spells_cast_7_3"></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td><input type="text" id="spells_know_8_1"></td>
+				<td><input type="text" id="spells_cast_8_1"></td>
+				<td><input type="text" id="spells_know_8_2"></td>
+				<td><input type="text" id="spells_cast_8_2"></td>
+				<td><input type="text" id="spells_know_8_3"></td>
+				<td><input type="text" id="spells_cast_8_3"></td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td><input type="text" id="spells_know_9_1"></td>
+				<td><input type="text" id="spells_cast_9_1"></td>
+				<td><input type="text" id="spells_know_9_2"></td>
+				<td><input type="text" id="spells_cast_9_2"></td>
+				<td><input type="text" id="spells_know_9_3"></td>
+				<td><input type="text" id="spells_cast_9_3"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div id="ac_init">
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Total</th>
+				<th>Base</th>
+				<th>Armor</th>
+				<th>Ability</th>
+				<th>Size</th>
+				<th>Misc</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><label for="ac_total">Armor Class</label></td>
+				<td><input type="text" id="ac_total" placeholder="Total"></td>
+				<td><input type="text" id="ac_base" placeholder="Base"></td>
+				<td><input type="text" id="ac_armor" placeholder="Armor"></td>
+				<td><input type="text" id="ac_ability" placeholder="Ability"></td>
+				<td><input type="text" id="ac_size" placeholder="Size"></td>
+				<td><input type="text" id="ac_misc" placeholder="Misc"></td>
+			</tr>
+			<tr>
+				<td><label for="init_total">Initiative</label></td>
+				<td><input type="text" id="init_total" placeholder="Total"></td>
+				<td><input type="text" id="init_base" placeholder="Base"></td>
+				<td><input type="text" id="init_armor" placeholder="Armor"></td>
+				<td><input type="text" id="init_ability" placeholder="Ability"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div id="savings">
+	<div class="savings_row">
+		<div id="ref_label">Reflexes</div>
+		<input type="text" id="ref_total" placeholder="Total">
+		<input type="text" id="ref_base" placeholder="Base">
+		<input type="text" id="ref_armor" placeholder="Armor">
+		<input type="text" id="ref_ability" placeholder="Ability">
+	</div>
+
+	<div class="savings_row">
+		<div id="fort_label">Fortitude</div>
+		<input type="text" id="fort_total" placeholder="Total">
+		<input type="text" id="fort_base" placeholder="Base">
+		<input type="text" id="fort_armor" placeholder="Armor">
+		<input type="text" id="fort_ability" placeholder="Ability">
+	</div>
+
+	<div class="savings_row">
+		<div id="will_label">Willpower</div>
+		<input type="text" id="will_total" placeholder="Total">
+		<input type="text" id="will_base" placeholder="Base">
+		<input type="text" id="will_armor" placeholder="Armor">
+		<input type="text" id="will_ability" placeholder="Ability">
+	</div>
+</div>
+
+
+<div id="weapons">
+	<div class="weapons_row">
+		<div class="weapon_name" placeholder="Name"></div>
+		<div class="weapon_base" placeholder="Base"></div>
+		<div class="weapon_ability" placeholder="Ability"></div>
+		<div class="weapon_feat" placeholder="Feat"></div>
+		<div class="weapon_misc" placeholder="Misc"></div>
+		<div class="weapon_bonus" placeholder="Bonus"></div>
+		<div class="weapon_damage" placeholder="Damage"></div>
+		<div class="weapon_crit" placeholder="Crit"></div>
+		<div class="weapon_range" placeholder="Range">
+	</div>
+</div>
+
+
+<div id="armor">
+	<div class="armor_name" placeholder="Name"></div>
+	<div class="armor_max_bonus" placeholder="Max Bonus"></div>
+	<div class="armor_dex_bonus" placeholder="Dex Bonus"></div>
+	<div class="armor_check_penalty" placeholder="Check Penalty"></div>
+	<div class="armor_spell_failure" placeholder="Spell Failure"></div>
+	<div class="armor_speed" placeholder="Speed"></div>
+</div>
+
+
+<div id="feats">
+	<div class="feats_row"></div>
+</div>
+
+
+<div id="misc">
+	<div id="misc_luck"></div>
+	<div id="misc_fame"></div>
+	<div id="misc_max_speed"></div>
+	<div id="misc_curr_speed"></div>
+	<div id="misc_honor"></div>
+	<div id="misc_money"></div>
+</div>
+
+</div>
+</form>
+
+</div>
+</div>
+
+</body>
+</html>
