@@ -2,6 +2,8 @@
 <html>
 <head>
 
+<title>Character Sheet - Page 1</title>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
@@ -11,7 +13,7 @@
 
 <style type="text/css">
 input {
-	width: 100%;
+	widdiv: 100%;
 }
 
 
@@ -114,192 +116,281 @@ label {
 </div>
 
 
+<style type="text/css">
+#abilities.ui-block-a .ui-grid-b .ui-block-a {
+	width: 20%;
+}
+
+#abilities.ui-block-a .ui-grid-b .ui-block-b,
+#abilities.ui-block-a .ui-grid-b .ui-block-c {
+	width: 40%;
+}
+</style>
+
 <div id="abilities" class="ui-block-a">
-	<table>
-		<thead>
-			<tr>
-				<th>Abilities</th>
-				<th>Score</th>
-				<th>Modifier</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><label for="str_score">Strength</label></td>
-				<td><input type="text" id="str_score" placeholder="Score"></td>
-				<td><input type="text" id="str_mod" placeholder="Modifier"></td>
-			</tr>
-			<tr>
-				<td><label for="dex_score">Dexterity</label></td>
-				<td><input type="text" id="dex_score" placeholder="Score"></td>
-				<td><input type="text" id="dex_mod" placeholder="Modifier"></td>
-			</tr>
-			<tr>
-				<td><label for="con_score">Constitution</label></td>
-				<td><input type="text" id="con_score" placeholder="Score"></td>
-				<td><input type="text" id="con_mod" placeholder="Modifier"></td>
-			</tr>
-			<tr>
-				<td><label for="int_score">Intelligence</label></td>
-				<td><input type="text" id="int_score" placeholder="Score"></td>
-				<td><input type="text" id="int_mod" placeholder="Modifier"></td>
-			</tr>
-			<tr>
-				<td><label for="wis_score">Wisdom</label></td>
-				<td><input type="text" id="wis_score" placeholder="Score"></td>
-				<td><input type="text" id="wis_mod" placeholder="Modifier"></td>
-			</tr>
-			<tr>
-				<td><label for="cha_score">Charisma</label></td>
-				<td><input type="text" id="cha_score" placeholder="Score"></td>
-				<td><input type="text" id="cha_mod" placeholder="Modifier"></td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="ui-grid-b">
+		<div class="ui-block-a">Abilities</div>
+		<div class="ui-block-b">Score</div>
+		<div class="ui-block-c">Modifier</div>
+
+		<div class="ui-block-a"><label for="str_score">Strength</label></div>
+		<div class="ui-block-b"><input type="text" id="str_score" placeholder="Score"></div>
+		<div class="ui-block-c"><input type="text" id="str_mod" placeholder="Modifier"></div>
+
+
+		<div class="ui-block-a"><label for="dex_score">Dexterity</label></div>
+		<div class="ui-block-b"><input type="text" id="dex_score" placeholder="Score"></div>
+		<div class="ui-block-c"><input type="text" id="dex_mod" placeholder="Modifier"></div>
+
+
+		<div class="ui-block-a"><label for="con_score">Constitution</label></div>
+		<div class="ui-block-b"><input type="text" id="con_score" placeholder="Score"></div>
+		<div class="ui-block-c"><input type="text" id="con_mod" placeholder="Modifier"></div>
+
+
+		<div class="ui-block-a"><label for="int_score">Intelligence</label></div>
+		<div class="ui-block-b"><input type="text" id="int_score" placeholder="Score"></div>
+		<div class="ui-block-c"><input type="text" id="int_mod" placeholder="Modifier"></div>
+
+
+		<div class="ui-block-a"><label for="wis_score">Wisdom</label></div>
+		<div class="ui-block-b"><input type="text" id="wis_score" placeholder="Score"></div>
+		<div class="ui-block-c"><input type="text" id="wis_mod" placeholder="Modifier"></div>
+
+
+		<div class="ui-block-a"><label for="cha_score">Charisma</label></div>
+		<div class="ui-block-b"><input type="text" id="cha_score" placeholder="Score"></div>
+		<div class="ui-block-c"><input type="text" id="cha_mod" placeholder="Modifier"></div>
+	</div>
 </div>
 
 
-<div id="spells">
-	<table>
-		<thead>
-			<tr>
-				<th>Spells</th>
-				<th>Know</th>
-				<th>Cast</th>
-				<th>Know</th>
-				<th>Cast</th>
-				<th>Know</th>
-				<th>Cast</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>0</td>
-				<td><input type="text" id="spells_know_0_1"></td>
-				<td><input type="text" id="spells_cast_0_1"></td>
-				<td><input type="text" id="spells_know_0_2"></td>
-				<td><input type="text" id="spells_cast_0_2"></td>
-				<td><input type="text" id="spells_know_0_3"></td>
-				<td><input type="text" id="spells_cast_0_3"></td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td><input type="text" id="spells_know_1_1"></td>
-				<td><input type="text" id="spells_cast_1_1"></td>
-				<td><input type="text" id="spells_know_1_2"></td>
-				<td><input type="text" id="spells_cast_1_2"></td>
-				<td><input type="text" id="spells_know_1_3"></td>
-				<td><input type="text" id="spells_cast_1_3"></td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td><input type="text" id="spells_know_2_1"></td>
-				<td><input type="text" id="spells_cast_2_1"></td>
-				<td><input type="text" id="spells_know_2_2"></td>
-				<td><input type="text" id="spells_cast_2_2"></td>
-				<td><input type="text" id="spells_know_2_3"></td>
-				<td><input type="text" id="spells_cast_2_3"></td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td><input type="text" id="spells_know_3_1"></td>
-				<td><input type="text" id="spells_cast_3_1"></td>
-				<td><input type="text" id="spells_know_3_2"></td>
-				<td><input type="text" id="spells_cast_3_2"></td>
-				<td><input type="text" id="spells_know_3_3"></td>
-				<td><input type="text" id="spells_cast_3_3"></td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td><input type="text" id="spells_know_4_1"></td>
-				<td><input type="text" id="spells_cast_4_1"></td>
-				<td><input type="text" id="spells_know_4_2"></td>
-				<td><input type="text" id="spells_cast_4_2"></td>
-				<td><input type="text" id="spells_know_4_3"></td>
-				<td><input type="text" id="spells_cast_4_3"></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td><input type="text" id="spells_know_5_1"></td>
-				<td><input type="text" id="spells_cast_5_1"></td>
-				<td><input type="text" id="spells_know_5_2"></td>
-				<td><input type="text" id="spells_cast_5_2"></td>
-				<td><input type="text" id="spells_know_5_3"></td>
-				<td><input type="text" id="spells_cast_5_3"></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td><input type="text" id="spells_know_6_1"></td>
-				<td><input type="text" id="spells_cast_6_1"></td>
-				<td><input type="text" id="spells_know_6_2"></td>
-				<td><input type="text" id="spells_cast_6_2"></td>
-				<td><input type="text" id="spells_know_6_3"></td>
-				<td><input type="text" id="spells_cast_6_3"></td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td><input type="text" id="spells_know_7_1"></td>
-				<td><input type="text" id="spells_cast_7_1"></td>
-				<td><input type="text" id="spells_know_7_2"></td>
-				<td><input type="text" id="spells_cast_7_2"></td>
-				<td><input type="text" id="spells_know_7_3"></td>
-				<td><input type="text" id="spells_cast_7_3"></td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td><input type="text" id="spells_know_8_1"></td>
-				<td><input type="text" id="spells_cast_8_1"></td>
-				<td><input type="text" id="spells_know_8_2"></td>
-				<td><input type="text" id="spells_cast_8_2"></td>
-				<td><input type="text" id="spells_know_8_3"></td>
-				<td><input type="text" id="spells_cast_8_3"></td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td><input type="text" id="spells_know_9_1"></td>
-				<td><input type="text" id="spells_cast_9_1"></td>
-				<td><input type="text" id="spells_know_9_2"></td>
-				<td><input type="text" id="spells_cast_9_2"></td>
-				<td><input type="text" id="spells_know_9_3"></td>
-				<td><input type="text" id="spells_cast_9_3"></td>
-			</tr>
-		</tbody>
-	</table>
+<style type="text/css">
+#spells.ui-block-b > .ui-grid-c > .ui-block-a {
+	width: 10%;
+}
+
+#spells.ui-block-b > .ui-grid-c > .ui-block-b,
+#spells.ui-block-b > .ui-grid-c > .ui-block-c,
+#spells.ui-block-b > .ui-grid-c > .ui-block-d {
+	width: 30%;
+}
+
+#spells.ui-block-b > .ui-grid-c > .ui-block-b.ui-grid-a > .ui-block-a,
+#spells.ui-block-b > .ui-grid-c > .ui-block-b.ui-grid-a > .ui-block-b,
+#spells.ui-block-b > .ui-grid-c > .ui-block-c.ui-grid-a > .ui-block-a,
+#spells.ui-block-b > .ui-grid-c > .ui-block-c.ui-grid-a > .ui-block-b,
+#spells.ui-block-b > .ui-grid-c > .ui-block-d.ui-grid-a > .ui-block-a,
+#spells.ui-block-b > .ui-grid-c > .ui-block-d.ui-grid-a > .ui-block-b {
+	width: 50%;
+}
+</style>
+
+<div id="spells" class="ui-block-b">
+	<div class="ui-grid-c">
+		<!-- Header -->
+		<div class="ui-block-a">Spells</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a">Know</div>
+			<div class="ui-block-b">Cast</div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a">Know</div>
+			<div class="ui-block-b">Cast</div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a">Know</div>
+			<div class="ui-block-b">Cast</div>
+		</div>
+
+
+		<!-- 0 -->
+		<div class="ui-block-a">0</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 1 -->
+		<div class="ui-block-a">1</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 2 -->
+		<div class="ui-block-a">2</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 3 -->
+		<div class="ui-block-a">3</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 4 -->
+		<div class="ui-block-a">4</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 5 -->
+		<div class="ui-block-a">5</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 6 -->
+		<div class="ui-block-a">6</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 7 -->
+		<div class="ui-block-a">7</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 8 -->
+		<div class="ui-block-a">8</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+
+
+		<!-- 9 -->
+		<div class="ui-block-a">9</div>
+		<div class="ui-block-b ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-c ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+		<div class="ui-block-d ui-grid-a">
+			<div class="ui-block-a"><input type="text"></div>
+			<div class="ui-block-b"><input type="text"></div>
+		</div>
+	</div>
 </div>
 
+<!--
+<div id="ac_init" class="ui-block-a ui-grid-c">
 
-<div id="ac_init">
-	<table>
-		<thead>
-			<tr>
-				<th></th>
-				<th>Total</th>
-				<th>Base</th>
-				<th>Armor</th>
-				<th>Ability</th>
-				<th>Size</th>
-				<th>Misc</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><label for="ac_total">Armor Class</label></td>
-				<td><input type="text" id="ac_total" placeholder="Total"></td>
-				<td><input type="text" id="ac_base" placeholder="Base"></td>
-				<td><input type="text" id="ac_armor" placeholder="Armor"></td>
-				<td><input type="text" id="ac_ability" placeholder="Ability"></td>
-				<td><input type="text" id="ac_size" placeholder="Size"></td>
-				<td><input type="text" id="ac_misc" placeholder="Misc"></td>
-			</tr>
-			<tr>
-				<td><label for="init_total">Initiative</label></td>
-				<td><input type="text" id="init_total" placeholder="Total"></td>
-				<td><input type="text" id="init_base" placeholder="Base"></td>
-				<td><input type="text" id="init_armor" placeholder="Armor"></td>
-				<td><input type="text" id="init_ability" placeholder="Ability"></td>
-			</tr>
-		</tbody>
-	</table>
+		<div>Total</div>
+		<div>Base</div>
+				<div>Armor</div>
+				<div>Ability</div>
+				<div>Size</div>
+				<div>Misc</div>
+
+
+				<div><label for="ac_total">Armor Class</label></div>
+				<div><input type="text" id="ac_total" placeholder="Total"></div>
+				<div><input type="text" id="ac_base" placeholder="Base"></div>
+				<div><input type="text" id="ac_armor" placeholder="Armor"></div>
+				<div><input type="text" id="ac_ability" placeholder="Ability"></div>
+				<div><input type="text" id="ac_size" placeholder="Size"></div>
+				<div><input type="text" id="ac_misc" placeholder="Misc"></div>
+
+
+				<div><label for="init_total">Initiative</label></div>
+				<div><input type="text" id="init_total" placeholder="Total"></div>
+				<div><input type="text" id="init_base" placeholder="Base"></div>
+				<div><input type="text" id="init_armor" placeholder="Armor"></div>
+				<div><input type="text" id="init_ability" placeholder="Ability"></div>
+
 </div>
 
 
@@ -368,6 +459,8 @@ label {
 	<div id="misc_honor"></div>
 	<div id="misc_money"></div>
 </div>
+
+-->
 
 </div>
 </form>
