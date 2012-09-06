@@ -4,6 +4,9 @@
 
 <title>Character Sheet - Page 1</title>
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
@@ -79,38 +82,32 @@ label {
 <div class="ui-grid-a">
 	<div class="ui-block-a">
 		<!-- Top Left -->
-		<div id="topleft" class="ui-grid-solo">
-			<div class="ui-field-contain">
-				<label for="character_name">Character Name</label>
-				<input type="text" data-mini="true" id="character_name" placeholder="Character Name">
+		<div id="topleft">
+			<div class="ui-grid-solo">
+				<input type="text" id="character_name" placeholder="Character Name">
 			</div>
 
 			<div class="ui-grid-a">
-				<div class="ui-block-a ui-field-contain">
-					<label for="race">Race</label>
-					<input type="text" data-mini="true" id="race" placeholder="Race">
+				<div class="ui-block-a">
+					<input type="text" id="race" placeholder="Race">
 				</div>
 
-				<div class="ui-block-b ui-field-contain">
-					<label for="alignment">Alignment</label>
-					<input type="text" data-mini="true" id="alignment" placeholder="Alignment">
+				<div class="ui-block-b">
+					<input type="text" id="alignment" placeholder="Alignment">
 				</div>
 			</div>
 
 			<div class="ui-grid-b">
-				<div class="ui-block-a ui-field-contain">
-					<label for="gender">Gender</label>
-					<input type="text" data-mini="true" id="gender" placeholder="Gender">
+				<div class="ui-block-a">
+					<input type="text" id="gender" placeholder="Gender">
 				</div>
 
-				<div class="ui-block-b ui-field-contain">
-					<label for="age">Age</label>
-					<input type="number" data-mini="true" id="age" placeholder="Age">
+				<div class="ui-block-b">
+					<input type="number" id="age" placeholder="Age">
 				</div>
 
-				<div class="ui-block-c ui-field-contain">
-					<label for="size">Size</label>
-					<input type="text" data-mini="true" id="size" placeholder="Size">
+				<div class="ui-block-c">
+					<input type="text" id="size" placeholder="Size">
 				</div>
 			</div>
 		</div>
@@ -264,51 +261,310 @@ label {
 				<input type="text" id="will_ability" placeholder="Ability">
 			</div>
 		</div>
+
+
+		<div id="weapons">
+			<div class="ui-grid-solo">
+				Weapons
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a ui-grid-d">
+					<div class="ui-block-a">
+						Base
+					</div>
+					<div class="ui-block-b">
+						Ability
+					</div>
+					<div class="ui-block-c">
+						Feat
+					</div>
+					<div class="ui-block-d">
+						Misc
+					</div>
+					<div class="ui-block-e">
+						Bonus
+					</div>
+				</div>
+				<div class="ui-block-b ui-grid-b">
+					<div class="ui-block-a">
+						Damage
+					</div>
+					<div class="ui-block-b">
+						Crit
+					</div>
+					<div class="ui-block-c">
+						Range
+					</div>
+				</div>
+			</div>
+
+
+			<div class="ui-grid-solo">
+				<input type="text" placeholder="Weapon Name">
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a ui-grid-d">
+					<div class="ui-block-a">
+						<input class="weapon_base" placeholder="Base">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_ability" placeholder="Ability">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_feat" placeholder="Feat">
+					</div>
+					<div class="ui-block-d">
+						<input class="weapon_misc" placeholder="Misc">
+					</div>
+					<div class="ui-block-e">
+						<input class="weapon_bonus" placeholder="Bonus">
+					</div>
+				</div>
+				<div class="ui-block-b ui-grid-b">
+					<div class="ui-block-a">
+						<input class="weapon_damage" placeholder="Damage">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_crit" placeholder="Crit">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_range" placeholder="Range">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="ui-grid-solo">
+				<input type="text" placeholder="Weapon Name">
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a ui-grid-d">
+					<div class="ui-block-a">
+						<input class="weapon_base" placeholder="Base">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_ability" placeholder="Ability">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_feat" placeholder="Feat">
+					</div>
+					<div class="ui-block-d">
+						<input class="weapon_misc" placeholder="Misc">
+					</div>
+					<div class="ui-block-e">
+						<input class="weapon_bonus" placeholder="Bonus">
+					</div>
+				</div>
+				<div class="ui-block-b ui-grid-b">
+					<div class="ui-block-a">
+						<input class="weapon_damage" placeholder="Damage">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_crit" placeholder="Crit">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_range" placeholder="Range">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="ui-grid-solo">
+				<input type="text" placeholder="Weapon Name">
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a ui-grid-d">
+					<div class="ui-block-a">
+						<input class="weapon_base" placeholder="Base">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_ability" placeholder="Ability">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_feat" placeholder="Feat">
+					</div>
+					<div class="ui-block-d">
+						<input class="weapon_misc" placeholder="Misc">
+					</div>
+					<div class="ui-block-e">
+						<input class="weapon_bonus" placeholder="Bonus">
+					</div>
+				</div>
+				<div class="ui-block-b ui-grid-b">
+					<div class="ui-block-a">
+						<input class="weapon_damage" placeholder="Damage">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_crit" placeholder="Crit">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_range" placeholder="Range">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="ui-grid-solo">
+				<input type="text" placeholder="Weapon Name">
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a ui-grid-d">
+					<div class="ui-block-a">
+						<input class="weapon_base" placeholder="Base">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_ability" placeholder="Ability">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_feat" placeholder="Feat">
+					</div>
+					<div class="ui-block-d">
+						<input class="weapon_misc" placeholder="Misc">
+					</div>
+					<div class="ui-block-e">
+						<input class="weapon_bonus" placeholder="Bonus">
+					</div>
+				</div>
+				<div class="ui-block-b ui-grid-b">
+					<div class="ui-block-a">
+						<input class="weapon_damage" placeholder="Damage">
+					</div>
+					<div class="ui-block-b">
+						<input class="weapon_crit" placeholder="Crit">
+					</div>
+					<div class="ui-block-c">
+						<input class="weapon_range" placeholder="Range">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="armor" class="ui-grid-a">
+			<div class="ui-block-a ui-grid-b">
+				<div class="ui-block-a">
+					Armor &amp; Shield
+				</div>
+				<div class="ui-block-b">
+					Armor Bonus
+				</div>
+				<div class="ui-block-c">
+					Max Dex Bonus
+				</div>
+			</div>
+
+			<div class="ui-block-b ui-grid-b">
+				<div class="ui-block-a">
+					Check Penalty
+				</div>
+				<div class="ui-block-b">
+					Spell Failure
+				</div>
+				<div class="ui-block-c">
+					Speed
+				</div>
+			</div>
+
+
+			<div class="ui-block-a ui-grid-b">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Armor &amp; Shield">
+				</div>
+				<div class="ui-block-b">
+					<input type="text" placeholder="Armor Bonus">
+				</div>
+				<div class="ui-block-c">
+					<input type="text" placeholder="Max Dex Bonus">
+				</div>
+			</div>
+
+			<div class="ui-block-b ui-grid-b">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Check Penalty">
+				</div>
+				<div class="ui-block-b">
+					<input type="text" placeholder="Spell Failure">
+				</div>
+				<div class="ui-block-c">
+					<input type="text" placeholder="Speed">
+				</div>
+			</div>
+
+
+			<div class="ui-block-a ui-grid-b">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Armor &amp; Shield">
+				</div>
+				<div class="ui-block-b">
+					<input type="text" placeholder="Armor Bonus">
+				</div>
+				<div class="ui-block-c">
+					<input type="text" placeholder="Max Dex Bonus">
+				</div>
+			</div>
+
+			<div class="ui-block-b ui-grid-b">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Check Penalty">
+				</div>
+				<div class="ui-block-b">
+					<input type="text" placeholder="Spell Failure">
+				</div>
+				<div class="ui-block-c">
+					<input type="text" placeholder="Speed">
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 	<div class="ui-block-b">
 		<div id="topright">
 			<div class="ui-grid-solo">
-				<input type="text" data-mini="true" id="player" placeholder="Player Name">
+				<input type="text" id="player" placeholder="Player Name">
 			</div>
 
 
 			<div class="ui-grid-b">
 				<div class="ui-block-a">
-					<input type="text" data-mini="true" id="class_a" placeholder="Class A">
+					<input type="text" id="class_a" placeholder="Class A">
 				</div>
 
 				<div class="ui-block-b">
-					<input type="text" data-mini="true" id="class_b" placeholder="Class B">
+					<input type="text" id="class_b" placeholder="Class B">
 				</div>
 
 				<div class="ui-block-c">
-					<input type="text" data-mini="true" id="class_c" placeholder="Class C">
+					<input type="text" id="class_c" placeholder="Class C">
 				</div>
 
 				<div class="ui-block-a">
-					<input type="number" data-mini="true" id="level_a" placeholder="Level A">
+					<input type="number" id="level_a" placeholder="Level A">
 				</div>
 
 				<div class="ui-block-b">
-					<input type="number" data-mini="true" id="level_b" placeholder="Level B">
+					<input type="number" id="level_b" placeholder="Level B">
 				</div>
 
 				<div class="ui-block-c">
-					<input type="number" data-mini="true" id="level_c" placeholder="Level C">
+					<input type="number" id="level_c" placeholder="Level C">
 				</div>
 
 				<div class="ui-block-a">
-					<input type="number" data-mini="true" id="xp_a" placeholder="XP A">
+					<input type="number" id="xp_a" placeholder="XP A">
 				</div>
 
 				<div class="ui-block-b">
-					<input type="number" data-mini="true" id="xp_b" placeholder="XP B">
+					<input type="number" id="xp_b" placeholder="XP B">
 				</div>
 
 				<div class="ui-block-c">
-					<input type="number" data-mini="true" id="xp_c" placeholder="XP C">
+					<input type="number" id="xp_c" placeholder="XP C">
 				</div>
 			</div>
 		</div>
@@ -492,25 +748,101 @@ label {
 				</div>
 			</div>
 		</div>
+
+
+		<div id="spec_abil_feats">
+			<div class="ui-grid-solo">
+				Special Abilities &amp; Feats
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+			<div class="ui-grid-solo">
+				<input type="text">
+			</div>
+
+		</div>
+
+
+		<div id="misc">
+			<div class="ui-grid-solo">
+				Miscellaneous
+			</div>
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Max Speed">
+				</div>
+
+				<div class="ui-block-b">
+					<input type="text" placeholder="Current Speed">
+				</div>
+			</div>
+
+			<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Luck">
+				</div>
+
+				<div class="ui-block-b">
+					<input type="text" placeholder="Fame">
+				</div>
+
+				<div class="ui-block-c">
+					<input type="text" placeholder="Honor">
+				</div>
+			</div>
+
+			<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<input type="text" placeholder="Gold">
+				</div>
+				<div class="ui-block-b">
+					<input type="text" placeholder="Silver">
+				</div>
+				<div class="ui-block-c">
+					<input type="text" placeholder="Copper">
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 <!--
-<div id="weapons">
-	<div class="weapons_row">
-		<div class="weapon_name" placeholder="Name"></div>
-		<div class="weapon_base" placeholder="Base"></div>
-		<div class="weapon_ability" placeholder="Ability"></div>
-		<div class="weapon_feat" placeholder="Feat"></div>
-		<div class="weapon_misc" placeholder="Misc"></div>
-		<div class="weapon_bonus" placeholder="Bonus"></div>
-		<div class="weapon_damage" placeholder="Damage"></div>
-		<div class="weapon_crit" placeholder="Crit"></div>
-		<div class="weapon_range" placeholder="Range">
-	</div>
-</div>
-
-
 <div id="armor">
 	<div class="armor_name" placeholder="Name"></div>
 	<div class="armor_max_bonus" placeholder="Max Bonus"></div>
@@ -518,21 +850,6 @@ label {
 	<div class="armor_check_penalty" placeholder="Check Penalty"></div>
 	<div class="armor_spell_failure" placeholder="Spell Failure"></div>
 	<div class="armor_speed" placeholder="Speed"></div>
-</div>
-
-
-<div id="feats">
-	<div class="feats_row"></div>
-</div>
-
-
-<div id="misc">
-	<div id="misc_luck"></div>
-	<div id="misc_fame"></div>
-	<div id="misc_max_speed"></div>
-	<div id="misc_curr_speed"></div>
-	<div id="misc_honor"></div>
-	<div id="misc_money"></div>
 </div>
 
 -->
